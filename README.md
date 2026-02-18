@@ -31,3 +31,14 @@ Clone the repository and install the necessary dependencies:
 git clone [https://github.com/Nexonik2/Realms-Blitz-Production-Dashboard.git](https://github.com/Nexonik2/Realms-Blitz-Production-Dashboard.git)
 cd Realms-Blitz-Production-Dashboard
 npm install
+```
+
+### 3. Resource Icons
+For icons to render correctly, ensure your PNG assets are placed in the /public/images/ directory. Files should be named in lowercase (`e.g., workershut.png, wheat.png, coldiron.png`).
+
+### 4. Start the Application
+Launch it locally (`localhost:5173`):
+
+```bash
+npm run dev
+```
