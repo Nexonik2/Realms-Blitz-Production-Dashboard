@@ -1,15 +1,16 @@
 export const getIconPath = (name) => {
-  // 1. Convert to lowercase: "Cold Iron" -> "cold iron"
-  // 2. Remove all spaces: "cold iron" -> "coldiron"
-  const cleanName = name.toLowerCase().replace(/\s+/g, '');
+  // 1. Convert to lowercase: "Worker's Hut" -> "worker's hut"
+  // 2. Remove all non-alphanumeric characters (spaces, apostrophes, etc.): 
+  //    "worker's hut" -> "workershut"
+  const cleanName = name.toLowerCase().replace(/[^a-z0-9]/g, '');
 
-  // Handle specific shared icons or overrides
+  // Handle specific shared icons for troops
   if (cleanName.includes('knight')) return "/images/knight.png";
   if (cleanName.includes('crossbowman')) return "/images/crossbowman.png";
   if (cleanName.includes('paladin')) return "/images/paladin.png";
   
-  // This points to the public/images folder in your local dev
-  // In production, Vite serves these from the root /images/ path
+  // This correctly maps "Worker's Hut" to "/images/workershut.png"
+  // and "Cold Iron" to "/images/coldiron.png"
   return `/images/${cleanName}.png`;
 };
 
