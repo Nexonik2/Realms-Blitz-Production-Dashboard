@@ -10,7 +10,7 @@ export const getIconPath = (name) => {
   
   // For all other resources (Wheat, Coal, Ironwood, etc.), 
   // use the lowercase name to match the .png filename exactly.
-  return `/images/${lower}.png`;
+  return `src/images/${lower}.png`;
 };
 
 export const getDisplayName = (name) => {
